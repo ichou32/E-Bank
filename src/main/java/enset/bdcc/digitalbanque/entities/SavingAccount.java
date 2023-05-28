@@ -1,11 +1,13 @@
 package enset.bdcc.digitalbanque.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+import lombok.*;
 
-@Data
-@NoArgsConstructor @AllArgsConstructor
+@Entity
+@DiscriminatorValue("SA")
+@Data @NoArgsConstructor @AllArgsConstructor
+@Setter @Getter
 public class SavingAccount extends BankAccount{
     private  double interestRate;
 }
