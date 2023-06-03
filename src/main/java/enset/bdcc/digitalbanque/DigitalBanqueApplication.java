@@ -56,7 +56,6 @@ public class DigitalBanqueApplication {
                 bankAccountRepository.save(savingAccount);
             });
             bankAccountRepository.findAll().forEach(acc ->{
-                System.out.println(acc);
                 for (int i = 0; i < 10; i++) {
                     AccountOperation accountOperation = new AccountOperation();
                     accountOperation.setAmount(Math.random()*14000);

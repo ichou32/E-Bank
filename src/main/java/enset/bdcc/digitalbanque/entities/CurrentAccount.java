@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import lombok.*;
 
 @Entity
-//@DiscriminatorValue("CA")
+@DiscriminatorValue("CA")
 @Data @NoArgsConstructor @AllArgsConstructor
 @Getter @Setter
 public class CurrentAccount extends BankAccount{
