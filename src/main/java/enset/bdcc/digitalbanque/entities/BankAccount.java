@@ -13,11 +13,12 @@ import java.util.List;
 @DiscriminatorColumn(name = "TYPE", length = 4)
 @Data @NoArgsConstructor @AllArgsConstructor
 @Getter @Setter
-public class BankAccount {
+public abstract class BankAccount {
     @Id
-    private Long id;
+    private String id;
     private double balance;
     private Date createdAt;
+    @Enumerated(EnumType.STRING)
     private AccountStatus accountStatus;
     @ManyToOne
     private Customer customer;
